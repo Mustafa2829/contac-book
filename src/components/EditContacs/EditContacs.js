@@ -3,11 +3,11 @@ import React, { useState } from 'react';
 const EditContacs = (props) => {
 
     console.log(props);
-    const [editName, setEditName] = useState(props.EditContacs.name);
-    const [editSurname, setEditSurname] = useState(props.EditContacs.surname);
-    const [editPhone, setEditPhone] = useState(props.EditContacs.phone);
+    const [editName, setEditName] = useState(props.editContacs.name);
+    const [editSurname, setEditSurname] = useState(props.editContacs.surname);
+    const [editPhone, setEditPhone] = useState(props.editContacs.phone);
     function handleSaveClick() {
-        let contact = { ...props.editContact }
+        let contact = { ...props.editContacs }
         contact.name = editName;
         contact.surname = editSurname;
         contact.phone = editPhone;
@@ -29,7 +29,7 @@ const EditContacs = (props) => {
             <input
                 onChange={(e) => setEditSurname(e.target.value)}
                 type="text"
-                placeholder='editSurname'
+                placeholder='Surname'
                 value={editSurname} />
             <input
                 onChange={(e) => setEditPhone(e.target.value)}

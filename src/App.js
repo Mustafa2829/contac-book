@@ -23,8 +23,8 @@ function App() {
   }
 
   function handleEditIndex(index) {
-    setEditContacts(contacs[index])
     setIsEdit(true)
+    setEditContacts(contacs[index])
   }
 
   function handleSaveEditedContact(newContact) {
